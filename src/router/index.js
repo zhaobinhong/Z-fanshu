@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import List from '@/components/List'
 import signUp from '@/pages/signUp'
+import sigIn from '@/pages/sigIn'
+import ArticleList from '@/pages/List'
+import ArticleCreate from '@/pages/create'
 
 Vue.use(Router)
 
@@ -17,12 +19,25 @@ export default new Router({
     {
       path: '/list',
       name: 'List',
-      component: List
+      component: ArticleList
     },
     {
-      path: '/4',
+      path: '/signUp',
       name: 'signUp',
       component: signUp
+    },
+    {
+      path: '/sigIn',
+      name: 'sigIn',
+      component: sigIn
+    },
+    {
+      path: '/article/create',
+      name: 'ArticleCreate',
+      component: ArticleCreate,
+      meta: {
+        needLogin: true
+      }
     }
   ]
 })

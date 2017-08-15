@@ -39,10 +39,10 @@
         next()
       })
       //  hook the progress bar to finish after we've finished moving router-view
-      this.$router.afterEach((to, from) => {
-        //  finish the progress bar
-        this.$Progress.finish()
-      })
+//      this.$router.afterEach((to, from) => {
+//        //  finish the progress bar
+//        this.$Progress.finish()
+//      })
     }
   }
 </script>
